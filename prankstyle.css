@@ -1,0 +1,133 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  line-height: 1.4;
+  font-family: "Montserrat Alternates", sans-serif;
+  background-image: linear-gradient(260deg, #2376ae 0%, #c16ecf 100%);
+
+}
+
+header {
+  text-align: center;
+  margin-bottom: 5vh;
+  color: white;
+}
+
+header img {
+  width: 60px;
+  margin: 10px;
+  transition: transform .5s;
+  animation: slide 2s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-50deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+header h1 {
+  margin: 2vh 5vw;
+  background: violet;
+  border-radius: 10px;
+  transition: .5s;
+  animation: title 2s infinite;
+}
+
+@keyframes title {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 5%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.container {
+  border: 0;
+  padding: 1.5em;
+  margin: 0 5vw 5vh 5vw;
+  background: pink;
+  box-shadow: 0 0 20px rgb(56, 7, 68);
+  line-height: 40px;
+  border-radius: 10px;
+  border-right: 1px solid rgba(0,0,0,0.2);
+  color: purple;
+}
+
+input, textarea {
+  transition: transform .5s;
+  animation: box 2s ease-in-out infinite;
+}
+
+@keyframes box {
+  0% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(70px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+.text {
+  margin-bottom: 1em;
+}
+
+textarea {
+  border-radius: 10px;
+}
+
+.signup {
+  text-decoration: none;
+  background: purple;
+  color: white;
+  padding: 1em;
+  border-radius: 4px;
+  box-shadow: 0 0 5px purple;
+  margin-bottom: 1.5em;
+}
+
+.signup:hover {
+  background: rgb(75, 0, 75);
+}
+
+footer {
+  text-align: center;
+}
+
+/* Flexbox start */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+  max-width: 540px;
+  margin: 10vh auto;
+  line-height: 7vh;
+  }
+
+
+}
